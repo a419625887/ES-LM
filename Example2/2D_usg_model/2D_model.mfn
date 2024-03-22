@@ -1,0 +1,10 @@
+LIST                1         2D_model.out     #  1. Ftype Nunit Fname [Option]
+DATA(BINARY)        2         2D_model.hed     #  1. Ftype Nunit Fname [Option]
+DATA(BINARY)        40        2D_model.ccf     #  1. Ftype Nunit Fname [Option]
+DISU                3         2D_model.disu    #  1. Ftype Nunit Fname [Option]
+BAS6                4         2D_model.ba6     #  1. Ftype Nunit Fname [Option]
+LPF                 7         2D_model.lpf     #  1. Ftype Nunit Fname [Option]
+OC                  8         2D_model.oc      #  1. Ftype Nunit Fname [Option]
+GHB                 9         2D_model.ghb     #  1. Ftype Nunit Fname [Option]
+SMS                 10        2D_model.sms     #  1. Ftype Nunit Fname [Option]
+DATA               101 HK.dat

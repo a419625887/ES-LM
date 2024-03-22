@@ -1,0 +1,294 @@
+                                  MODFLOW-USG      
+      U.S. GEOLOGICAL SURVEY MODULAR FINITE-DIFFERENCE GROUNDWATER FLOW MODEL
+                            VERSION 1.4.00 10/27/2017
+
+ LIST FILE: 2D_model.out
+                         UNIT    1
+
+ OPENING 2D_model.hed
+ FILE TYPE:DATA(BINARY)   UNIT    2   STATUS:UNKNOWN
+ FORMAT:BINARY                 ACCESS:SEQUENTIAL          
+
+ OPENING 2D_model.ccf
+ FILE TYPE:DATA(BINARY)   UNIT   40   STATUS:UNKNOWN
+ FORMAT:BINARY                 ACCESS:SEQUENTIAL          
+
+ OPENING 2D_model.disu
+ FILE TYPE:DISU   UNIT    3   STATUS:OLD    
+ FORMAT:FORMATTED              ACCESS:SEQUENTIAL          
+
+ OPENING 2D_model.ba6
+ FILE TYPE:BAS6   UNIT    4   STATUS:OLD    
+ FORMAT:FORMATTED              ACCESS:SEQUENTIAL          
+
+ OPENING 2D_model.lpf
+ FILE TYPE:LPF   UNIT    7   STATUS:OLD    
+ FORMAT:FORMATTED              ACCESS:SEQUENTIAL          
+
+ OPENING 2D_model.oc
+ FILE TYPE:OC   UNIT    8   STATUS:OLD    
+ FORMAT:FORMATTED              ACCESS:SEQUENTIAL          
+
+ OPENING 2D_model.ghb
+ FILE TYPE:GHB   UNIT    9   STATUS:OLD    
+ FORMAT:FORMATTED              ACCESS:SEQUENTIAL          
+
+ OPENING 2D_model.sms
+ FILE TYPE:SMS   UNIT   10   STATUS:OLD    
+ FORMAT:FORMATTED              ACCESS:SEQUENTIAL          
+
+ OPENING HK.dat
+ FILE TYPE:DATA   UNIT  101   STATUS:UNKNOWN
+ FORMAT:FORMATTED              ACCESS:SEQUENTIAL          
+
+ BAS -- BASIC PACKAGE-USG      1.4.00 10/27/2017                        INPUT READ FROM UNIT    4
+ 
+ THE FREE FORMAT OPTION HAS BEEN SELECTED
+ THE UNSTRUCTURED GRID OPTION HAS BEEN SELECTED
+
+ DIS -- UNSTRUCTURED GRID DISCRETIZATION PACKAGE, VERSION 1 : 5/17/2010 - INPUT READ FROM UNIT    3
+ # MF2K UNSTRUCTURED DISCRETIZATION FILE
+ #
+        100 NODES         1 NLAY       460 NJAG  VERT. SUBDISCRETIZATION INDEX, IVSD = -1
+ INDEX FOR INPUT OF UNSTRUCTURED, FINITE-VOLUME CONNECTIVITY INFORMATION, IDSYMRD =   0
+    1 STRESS PERIOD(S) IN SIMULATION
+ MODEL TIME UNIT IS DAYS
+ MODEL LENGTH UNIT IS FEET
+  Confining bed flag for each layer:
+   0
+
+ DIS -- UNSTRUCTURED GRID DISCRETIZATION PACKAGE, VERSION 1 : 5/17/2010 - INPUT READ FROM UNIT    3
+
+   NO. OF NODES PER LAYER =       100
+
+                      TOP =   10.0000     FOR LAYER   1
+
+                      BOT =   0.00000     FOR LAYER   1
+
+                     AREA =   100.000     FOR LAYER   1
+
+
+
+                                 IA
+ READING ON UNIT    3 WITH FORMAT: (FREE)              
+
+
+
+                                 JA
+ READING ON UNIT    3 WITH FORMAT: (FREE)              
+
+
+
+               CONNECTION LENGTH 12 FOR LAYER   1
+ READING ON UNIT    3 WITH FORMAT: (FREE)              
+
+
+
+                 PERPENDICULAR AREA
+ READING ON UNIT    3 WITH FORMAT: (FREE)              
+
+
+ STRESS PERIOD     LENGTH       TIME STEPS     MULTIPLIER FOR DELT    SS FLAG
+ ----------------------------------------------------------------------------
+        1         1.000000          1                    1.000         SS
+
+ STEADY-STATE SIMULATION
+
+
+
+
+           BOUNDARY ARRAY =         1 FOR LAYER   1
+
+ AQUIFER HEAD WILL BE SET TO  -999.00     AT ALL NO-FLOW NODES (IBOUND=0).
+
+             INITIAL HEAD =   10.0000     FOR LAYER   1
+
+ OUTPUT CONTROL IS SPECIFIED ONLY AT TIME STEPS FOR WHICH OUTPUT IS DESIRED
+ COMPACT CELL-BY-CELL BUDGET FILES WILL BE WRITTEN
+ AUXILIARY DATA WILL BE SAVED IN CELL-BY-CELL BUDGET FILES
+ HEAD PRINT FORMAT CODE IS   0    DRAWDOWN PRINT FORMAT CODE IS   0
+ HEADS WILL BE SAVED ON UNIT    2    DRAWDOWNS WILL BE SAVED ON UNIT    0
+
+ LPF -- LAYER-PROPERTY FLOW PACKAGE, VERSION 7, 5/2/2005
+         INPUT READ FROM UNIT    7
+ CELL-BY-CELL FLOWS WILL BE SAVED ON UNIT   40
+ HEAD AT CELLS THAT CONVERT TO DRY=  -888.00    
+ No named parameters
+ IKCFLAG=0, NODAL INPUT OF HY AND CV
+
+   LAYER FLAGS:
+ LAYER       LAYTYP        LAYAVG         CHANI        LAYVKA        LAYWET
+ ---------------------------------------------------------------------------
+    1             1             0    -1.000E+00             1             0
+
+   INTERPRETATION OF LAYER FLAGS:
+                        INTERBLOCK     HORIZONTAL    DATA IN
+         LAYER TYPE   TRANSMISSIVITY   ANISOTROPY   ARRAY VKA   WETTABILITY
+ LAYER      (LAYTYP)      (LAYAVG)       (CHANI)      (LAYVKA)      (LAYWET)
+ ---------------------------------------------------------------------------
+    1   CONVERTIBLE      HARMONIC      VARIABLE    ANISOTROPY  NON-WETTABLE
+
+ WETTING CAPABILITY IS NOT ACTIVE IN ANY LAYER
+
+
+
+                         FACE ANGLE
+ READING ON UNIT    7 WITH FORMAT: (FREE)              
+
+
+
+              HYD. COND. ALONG ROWS FOR LAYER   1
+ READING ON UNIT  101 WITH FORMAT: (FREE)              
+
+   HORIZ. ANI. (COL./ROW) =   1.00000     FOR LAYER   1
+
+  HORIZ. TO VERTICAL ANI. =   3.00000     FOR LAYER   1
+
+ GHB -- GENERAL-HEAD BOUNDARY PACKAGE, VERSION 7, 5/2/2005
+         INPUT READ FROM UNIT    9
+ #
+ No named parameters
+ MAXIMUM OF     11 ACTIVE GHB CELLS AT ONE TIME
+ CELL-BY-CELL FLOWS WILL BE SAVED ON UNIT   40
+ AUXILIARY GHB VARIABLE: IFACE           
+ AUXILIARY GHB VARIABLE: CONDFACT        
+ AUXILIARY GHB VARIABLE: CELLGRP         
+
+
+     0 GHB parameters
+
+ SMS -- SPARSE MATRIX SOLVER PACKAGE, VERSION 7, 5/2/2005
+         INPUT READ FROM UNIT 10
+ No named parameters
+ SIMPLE OPTION:
+ DEFAULT SOLVER INPUT VALUES FOR FAST SOLUTIONS
+ OUTER ITERATION CONVERGENCE CRITERION (HCLOSE) =    0.100000E-01
+ INNER ITERATION CONVERGENCE CRITERION (HICLOSE) =    0.100000E+00
+ MAXIMUM NUMBER OF OUTER ITERATIONS (MXITER)     =       500
+ MAXIMUM NUMBER OF INNER ITERATIONS (ITER1)      =       100
+ SOLVER PRINTOUT INDEX             (IPRSMS)      =         0
+ NONLINEAR ITERATION METHOD    (NONLINMETH)      =         0
+ LINEAR SOLUTION METHOD           (LINMETH)      =         2
+ ***Picard Linearization will be used***
+ 
+ ***PCGU linear solver will be used***
+
+ PCGU -- UNSTRUCTURED CONJUGATE-GRADIENT SOLUTION PACKAGE, VERSION 7.02, 08/13/2013
+
+              SOLUTION BY THE CONJUGATE-GRADIENT METHOD
+ ------------------------------------------------------------------
+ MAXIMUM OF    500 CALLS OF SOLUTION ROUTINE
+ MAXIMUM OF    100 INTERNAL ITERATIONS PER CALL TO SOLUTION ROUTINE
+ LINEAR ACCELERATION METHOD            = CG        
+ MATRIX PRECONDITIONING TYPE           = INCOMPLETE LU       
+ MATRIX SCALING APPROACH               = NO SCALING          
+ MATRIX REORDERING APPROACH            = ORIGINAL ORDERING        
+ HEAD CHANGE CRITERION FOR CLOSURE     =    0.10000E+00
+ RESIDUAL CHANGE CRITERION FOR CLOSURE =    0.10000E+00
+ RELAXATION FACTOR                     =    0.00000E+00
+  ONLY USED WITH MILU0 PRECONDITIONER
+
+
+ 
+1
+                            STRESS PERIOD NO.    1, LENGTH =   1.000000    
+                            -----------------------------------------------
+
+                              NUMBER OF TIME STEPS =     1
+
+                               MULTIPLIER FOR DELT =     1.000
+
+                            INITIAL TIME STEP SIZE =   1.000000    
+
+ GHB -- GENERAL-HEAD BOUNDARY PACKAGE, VERSION 7, 5/2/2005
+         INPUT READ FROM UNIT    9
+
+ BOUND NO.     NODE         STAGE         CONDUCTANCE         IFACE           CONDFACT        CELLGRP         
+ -------------------------------------------------------------------------------------------------------------
+      1          30       30.00          0.1000E+06       6.000           0.000          -1.000    
+      2          40       30.00          0.1000E+06       6.000           0.000          -1.000    
+      3          50       30.00          0.1000E+06       6.000           0.000          -1.000    
+      4          60       30.00          0.1000E+06       6.000           0.000          -1.000    
+      5          70       30.00          0.1000E+06       6.000           0.000          -1.000    
+      6           1       20.00          0.1000E+06       6.000           0.000          -1.000    
+      7          11       20.00          0.1000E+06       6.000           0.000          -1.000    
+      8          21       20.00          0.1000E+06       6.000           0.000          -1.000    
+      9          71       15.00          0.1000E+06       6.000           0.000          -1.000    
+     10          81       15.00          0.1000E+06       6.000           0.000          -1.000    
+     11          91       15.00          0.1000E+06       6.000           0.000          -1.000    
+
+     11 GHB CELLS
+ 
+ SOLVING FOR HEAD 
+
+
+ OUTER ITERATION SUMMARY
+ -----------------------
+ BT: Backtracking; LA: Linear Acceleration; UR: Under-relaxation
+
+    Outer-Iteration  Inner-Iteration    Maximum Head Change  Maximum Head Change
+        Number           Count               Value              Location
+LA         1               20                20.000                    50           GWF-node number
+LA         2                1               0.12494E-03                49           GWF-node number
+
+
+     2 CALLS TO SPARSE MATRIX SOLVER PACKAGE  IN FLOW TIME STEP   1 STRESS PERIOD   1
+
+ TOTAL OF       2OUTER ITERATIONS
+  MAXIMUM CHANGE FOR EACH ITERATION:
+   MAX. CHANGE        NODE  MAX. CHANGE        NODE  MAX. CHANGE        NODE  MAX. CHANGE        NODE  MAX. CHANGE        NODE
+ ------------------------------------------------------------------------------------------------------------------------------------
+    20.000    ,         50  0.12494E-03,         49
+
+ OUTPUT CONTROL FOR STRESS PERIOD        1   TIME STEP        1
+    PRINT BUDGET
+    SAVE HEAD FOR ALL LAYERS
+    SAVE BUDGET
+ UBDSV2U SAVING "   CONSTANT HEAD" ON UNIT  40 AT TIME STEP      1, STRESS PERIOD      1
+ UBDSV1U SAVING "   FLOW JA FACE " ON UNIT  40 AT TIME STEP      1, STRESS PERIOD      1
+ UBDSV4U SAVING " HEAD DEP BOUNDS" ON UNIT  40 AT TIME STEP      1, STRESS PERIOD      1
+
+ HEAD WILL BE SAVED ON UNIT    2 AT END OF TIME STEP   1, STRESS PERIOD    1
+1
+  VOLUMETRIC BUDGET FOR ENTIRE MODEL AT END OF TIME STEP       1 IN STRESS PERIOD       1
+  ---------------------------------------------------------------------------------------
+
+     CUMULATIVE VOLUMES      L**3       RATES FOR THIS TIME STEP      L**3/T
+     ------------------                 ------------------------
+
+           IN:                                      IN:
+           ---                                      ---
+             STORAGE =           0.0000               STORAGE =           0.0000
+       CONSTANT HEAD =           0.0000         CONSTANT HEAD =           0.0000
+     HEAD DEP BOUNDS =         326.5231       HEAD DEP BOUNDS =         326.5231
+
+            TOTAL IN =         326.5231              TOTAL IN =         326.5231
+
+          OUT:                                     OUT:
+          ----                                     ----
+             STORAGE =           0.0000               STORAGE =           0.0000
+       CONSTANT HEAD =           0.0000         CONSTANT HEAD =           0.0000
+     HEAD DEP BOUNDS =         326.5230       HEAD DEP BOUNDS =         326.5230
+
+           TOTAL OUT =         326.5230             TOTAL OUT =         326.5230
+
+            IN - OUT =       6.1035E-05              IN - OUT =       6.1035E-05
+
+ PERCENT DISCREPANCY =           0.00     PERCENT DISCREPANCY =           0.00
+
+
+
+
+
+
+          TIME SUMMARY AT END OF TIME STEP         1 IN STRESS PERIOD         1
+                    SECONDS     MINUTES      HOURS       DAYS        YEARS
+                    -----------------------------------------------------------
+   TIME STEP LENGTH  86400.      1440.0      24.000      1.0000     2.73785E-03
+ STRESS PERIOD TIME  86400.      1440.0      24.000      1.0000     2.73785E-03
+         TOTAL TIME  86400.      1440.0      24.000      1.0000     2.73785E-03
+1
+
+ Run end date and time (yyyy/mm/dd hh:mm:ss): 2024/03/21 17:22:08
+ Elapsed run time:  0.007 Seconds
+

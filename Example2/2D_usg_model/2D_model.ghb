@@ -1,0 +1,14 @@
+#
+   11    40 AUX IFACE AUX CONDFACT AUX CELLGRP                  #  2. MXACTB IGHBCB [Option]
+   11     0                                                     #  5. ITMP NP          Stress Period   1
+   30         30.0     100000.0     6           0.0    -1       # 6b. Node Bhead Cond [xyz]
+   40         30.0     100000.0     6           0.0    -1       # 6b. Node Bhead Cond [xyz]
+   50         30.0     100000.0     6           0.0    -1       # 6b. Node Bhead Cond [xyz]
+   60         30.0     100000.0     6           0.0    -1       # 6b. Node Bhead Cond [xyz]
+   70         30.0     100000.0     6           0.0    -1       # 6b. Node Bhead Cond [xyz]
+    1         20.0     100000.0     6           0.0    -1       # 6b. Node Bhead Cond [xyz]
+   11         20.0     100000.0     6           0.0    -1       # 6b. Node Bhead Cond [xyz]
+   21         20.0     100000.0     6           0.0    -1       # 6b. Node Bhead Cond [xyz]
+   71         15.0     100000.0     6           0.0    -1       # 6b. Node Bhead Cond [xyz]
+   81         15.0     100000.0     6           0.0    -1       # 6b. Node Bhead Cond [xyz]
+   91         15.0     100000.0     6           0.0    -1       # 6b. Node Bhead Cond [xyz]
